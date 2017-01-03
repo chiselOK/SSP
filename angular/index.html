@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+    <div class="contener">     
+        <script src="readAPI.js"></script>
+        <script src="ImageService.js"></script>
+        <main ng-controller="AppController" > 
+    	    <div class="button-contener"> Фильтр:  <input type="text"  ng-model="filt" ></input></div>
+            <div class="button-contener"> Количество статей:  <input type="number"  ng-model="numberart" max=20></input></div>                     
+            <hr style="width: 100%; border: 1px solid white;">
+            
+            <div ng-class="1!=1 ? 'list-style' : 'even-row-style'" ng-repeat="article in articles | orderBy:sortparam:sortReverse | filter:{section:filt} | limitTo:numberart " >  
+                <div class="FN-div" >
+                    <div><img ng-src="{{ images(article).toString()}}"></div>
+                    <div>{{article.byline}}</div>             
+                </div>  
+                <div class="LN-div" >
+                    <div><h4>{{article.title}}</h4></div>
+                    <div>{{article.abstract}}</div>
+                    <div><a href="{{article.url}}">Читать полностью...</a></div>
+                    <div class="sect"><i><b>Section: {{article.section}}</b></i></div>
+                </div>
+            </div>
+
+            <div>   
+                <input type="checkbox" ng-model="adding.visible">Показать/скрыть поля добавления нового поста     
+            <div class="button-contener" ng-show="adding.visible">Заголовок:  <input type="text" ng-model="title"></div>
+            <div class="button-contener" ng-show="adding.visible">Описание:  <input type="text" ng-model="abstract"></div>
+            <div class="button-contener" ng-show="adding.visible">Ссылка:  <input type="text" ng-model="url"></div>
+            <div class="button-contener" ng-show="adding.visible">Раздел:  <input type="text" ng-model="sectione"></div>
+            <div class="button-contener" >
+                
+                <button class="button"  ng-click="Addarticle(title,abstract,url,sectione)" ng-show="adding.visible">Добавить новость</button>
+            </div>    
+            
+            </div> 
+            <hr style="width: 100%; border: 1px solid white;">   
+        </main>
+    <div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+.list-style{
+    margin-bottom:10px;
+    margin-left: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 45%; 
+    height: 215px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #666;
+}
+.even-row-style{
+    margin-bottom:10px;
+    margin-left: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 45%; 
+    height: 215px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #666;
+    background-color: #edfcfc; 
+}
+.list-style > .FN-div{
+    width: 40%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+    float: left;
+    text-align: left;
+    border-radius: 10px;
+}
+.list-style > .FN-div > div{
+    text-align: center;
+}
+.list-style > .LN-div{
+    width: 60%;
+    
+    display: block; 
+    float: left;   
+    text-align: left;
+}
+.even-row-style > .FN-div{
+    width: 40%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+    float: left;
+    text-align: left;
+    border-radius: 10px;
+    background-color: #edfcfc; 
+}
+.even-row-style > .FN-div > div{
+    text-align: center;
+}
+.even-row-style > .LN-div{
+    width: 60%;
+    background-color: #edfcfc;
+    display: block; 
+    float: left;   
+    text-align: left;
+}
+
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+body{
+    font-family: 'Calibri';
+}
+.contener{
+	width: 90%; 
+    margin-left: 5%;
+}
+.button{
+    
+    padding: 3px 7px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #9fa8a8;
+    border: 1px solid #666;
+    width: 173px;
+    height: 33px;
+    margin-top: -2px;
+}
+.button-contener{
+    font-size: 25px;
+    display: block;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+input{
+    padding: 3px 7px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    width: 215px;
+    height: 24px;
+}
+h2{
+    margin-top: -0px; 
+}
+.sect{
+    text-align:  right;
+}
